@@ -56,11 +56,26 @@
   </script>
 
   <script>
-    hbspt.forms.create({
-      portalId: "247004836",
-      formId: "9af92a32-92bf-46f3-ac09-daa7b91972cd",
-      region: "na2"
+   
+hbspt.forms.create({
+  portalId: "247004836",
+  formId: "9af92a32-92bf-46f3-ac09-daa7b91972cd",
+  region: "na2",
+
+  onFormSubmitted: function($form, data) {
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "hubspot_form_success",
+      form_id: "9af92a32-92bf-46f3-ac09-daa7b91972cd",
+      form_name: "HubSpot Legacy Form",
+      form_type: "legacy"
     });
+
+  }
+});
+
   </script>
 
   <hr>
