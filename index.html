@@ -1,38 +1,144 @@
+
 <!DOCTYPE html>
-<html>
-<head> <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXFZ8VS8');</script>
-<!-- End Google Tag Manager -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Practice Site</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXFZ8VS8');
+  </script>
+  <!-- End Google Tag Manager -->
+
 </head>
+
 <body>
-  <h1>Hello, this is my practice site</h1>  
-  <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "247004836",
-    formId: "9af92a32-92bf-46f3-ac09-daa7b91972cd",
-    region: "na2"
-  });
-</script>
-  
-  <button id="testButton">Click Me</button>
-  
-  <script src="https://js-na2.hsforms.net/forms/embed/247004836.js" defer></script>
-<div class="hs-form-frame" data-region="na2" data-form-id="7ab17889-bcb4-406e-b459-202509a3bc79" data-portal-id="247004836"></div><form action="thankyou.html" method="get">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <button type="submit">Submit</button>
-</form> 
-  
+
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXFZ8VS8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KXFZ8VS8"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1>Hello, this is my practice site</h1>
+
+  <hr>
+
+  <!-- HUBSPOT FORM 1: LEGACY EMBED -->
+
+  <h2>HubSpot Form 1 - Legacy Form</h2>
+
+  <script
+    charset="utf-8"
+    type="text/javascript"
+    src="https://js-na2.hsforms.net/forms/embed/v2.js">
+  </script>
+
+  <script>
+    hbspt.forms.create({
+      portalId: "247004836",
+      formId: "9af92a32-92bf-46f3-ac09-daa7b91972cd",
+      region: "na2"
+    });
+  </script>
+
+  <hr>
+
+  <!-- HUBSPOT FORM 2: NEW EMBED -->
+
+  <h2>HubSpot Form 2 - New Form</h2>
+
+  <script
+    src="https://js-na2.hsforms.net/forms/embed/247004836.js"
+    defer>
+  </script>
+
+  <div
+    class="hs-form-frame"
+    data-region="na2"
+    data-form-id="7ab17889-bcb4-406e-b459-202509a3bc79"
+    data-portal-id="247004836">
+  </div>
+
+  <hr>
+
+  <!-- TEST BUTTON -->
+
+  <h2>Test Button</h2>
+
+  <button id="testButton" type="button">
+    Click Me
+  </button>
+
+  <hr>
+
+  <!-- NORMAL HTML FORM -->
+
+  <h2>Normal HTML Form</h2>
+
+  <form id="practiceForm">
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <br><br>
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <br><br>
+
+    <button type="submit">
+      Submit
+    </button>
+
+  </form>
+
+  <!-- NORMAL FORM REDIRECT SCRIPT -->
+
+  <script>
+    document.getElementById("practiceForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        // Practice form only.
+        // No personal information is sent in the URL.
+        // This does not save the submitted lead.
+
+        window.location.href = "thankyou.html";
+
+      });
+  </script>
+
 </body>
 </html>
